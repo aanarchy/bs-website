@@ -2,13 +2,9 @@ const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
   const navLinks = document.querySelectorAll(".nav-links li");
-  const homeButton = document.querySelectorAll(".home");
-  const aboutButton = document.querySelectorAll(".about");
-  const menuButton = document.querySelectorAll(".menu");
-  const surveyButton = document.querySelectorAll(".survey");
 
   burger.addEventListener("click", () => {
-    nav.classList.toggle("nav-active");
+    nav.classList.toggle("sidebar-active");
 
     // Animate links
     navLinks.forEach((link, index) => {
@@ -23,5 +19,17 @@ const navSlide = () => {
     burger.classList.toggle("toggle");
   });
 };
+
+$(document).ready(function() {
+  var path = window.location.pathname.split("/").pop();
+
+  if (path == "") {
+    path = "index.html";
+  }
+
+  var target = $('nav-links a[href="' + path + '"]');
+
+  target.addClass("active");
+});
 
 navSlide();

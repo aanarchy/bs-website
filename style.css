@@ -6,7 +6,8 @@ html {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Lato", "sans-serif";
+  font-family: "Montserrat", "sans-serif";
+  background-color: #eceff4;
 }
 
 nav {
@@ -14,17 +15,18 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
+  max-height: 20vh;
   width: 100%;
-  position: fixed;
-  top: 0;
-  background-color: #434c5e;
+  background-color: #eceff4;
 }
 
 .logo {
-  color: rgb(226, 226, 226);
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 22px;
+  width: 300px;
+  height: 100px;
+  background-image: url(assets/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .nav-links {
@@ -38,11 +40,31 @@ nav {
 }
 
 .nav-links a {
-  color: rgb(226, 226, 226);
+  color: #3b4252;
   text-decoration: none;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
 }
+
+.nav-links a:hover {
+  color: #d8dee9;
+}
+
+/* Link hover animation
+.nav-links a:hover::after {
+  color: #eceff4;
+  width: 100%;
+  transition: width 0.5s;
+}
+
+.nav-links a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #d8dee9;
+  transition: width 0.5s;
+} */
 
 .burger {
   display: none;
@@ -52,9 +74,9 @@ nav {
 .burger div {
   width: 25px;
   height: 2px;
-  background-color: rgb(226, 226, 226);
+  background-color: #d8dee9;
   margin: 5px;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 @media screen and (max-width: 1024px) {
@@ -70,12 +92,12 @@ nav {
     overflow-x: hidden;
   }
   .nav-links {
-    position: absolute;
+    position: relative;
     right: 0px;
     height: 92vh;
     width: 35%;
     top: 8vh;
-    background-color: #434c5e;
+    background-color: #eceff4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,8 +112,22 @@ nav {
   }
 }
 
-.nav-active {
+.sidebar-active {
   transform: translateX(0%);
+}
+
+/* old active link style
+.active a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #d8dee9;
+  transition: width 0.5s;
+} */
+
+.active a {
+  color: #d8dee9;
 }
 
 @keyframes navLinkFade {
@@ -118,6 +154,27 @@ nav {
 }
 
 .section {
-  font-family: "Open Sans", "sans-serif";
+  font-family: "Montserrat", "sans-serif";
   height: 600px;
 }
+
+.title {
+  width: 100%;
+  height: 500px;
+  background-color: #eceff4;
+  color: #2e3440;
+  text-align: center;
+  display: block;
+}
+
+.title h1 {
+  height: 100px;
+  margin: 100px 0px 0px 0px;
+  padding: 25px;
+}
+
+.title h2 {
+  margin: 0px;
+  padding: 0px;
+}
+
