@@ -1,3 +1,3 @@
-# bs-website
+# ICT Final Project
 
-Website designed for The Mundane Company
+Final project for S3
