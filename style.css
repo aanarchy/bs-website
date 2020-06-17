@@ -68,7 +68,7 @@ nav {
 } */
 
 .burger {
-  display: block;
+  display: none;
   cursor: pointer;
 }
 
@@ -158,6 +158,7 @@ nav {
 .title h2 {
   padding: 100px 0px 0px 0px;
   opacity: 0;
+  font-style: italic;
   animation: textFadeIn;
   animation-delay: 2s;
   animation-duration: 1s;
