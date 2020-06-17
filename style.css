@@ -9,6 +9,10 @@ html {
   font-family: "Montserrat", "sans-serif";
 }
 
+body {
+  background-color: #eceff4;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -19,15 +23,6 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-}
-
-.logo {
-  width: 300px;
-  height: 100px;
-  background-image: url(assets/logo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .nav-links {
@@ -137,17 +132,22 @@ nav {
   position: relative;
   z-index: -1;
   width: 100%;
-  height: 300px;
+  height: 900px;
   background-color: #eceff4;
-  color: #2e3440;
+  color: #eceff4;
   text-align: center;
   display: block;
   padding: 100px 25px 100px 25px;
+  background-image: url("assets/musk_smoking_pot_HD.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .title h1 {
-  height: 100px;
-  padding: 25px 0px 25px 0px;
+  height: 500px;
+  display: block;
+  padding-top: 200px;
   opacity: 0;
   animation: textFadeIn;
   animation-delay: 0.5s;
@@ -167,21 +167,31 @@ nav {
 
 .content {
   position: relative;
+  display: block;
   z-index: -1;
   display: grid;
   padding: 4em 10vw 4em 15vw;
   grid-template-columns: auto auto auto;
-  background-color: #E5E9F0;
 }
 
 .content div {
   padding: 10px;
-  background-color: #E5E9F0;
 }
 
 .content div h3 {
   padding: 0px 0px 10px 0px;
-  background-color: #E5E9F0;
+}
+
+.about-content {
+  display: block;
+  z-index: -1;
+  padding: 4em 10vw 4em 15vw;
+  font-size: 20px;
+}
+
+.about-content h1 {
+  padding-top: 4em;
+  padding-bottom: 10vw;
 }
 
 @media screen and (max-width: 1024px) {
@@ -194,6 +204,7 @@ nav {
   body {
     overflow-x: hidden;
   }
+
   .nav-links {
     position: absolute;
     z-index: 2;
@@ -213,10 +224,16 @@ nav {
   }
   .burger {
     display: block;
+    margin-left: auto;
+    margin-right: 5vh;
   }
   .content {
     display: block;
     padding: 4em 5vw 4em 5vw;
+  }
+
+  .about-content {
+    font-size: 16px;
   }
 }
 
